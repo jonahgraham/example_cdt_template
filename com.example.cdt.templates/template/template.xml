@@ -36,6 +36,19 @@
 		</complex-array>
 	</process>
 
+	<!--  Set -std=c99 by selecting the enum in the settings -->
+	<process
+		type="org.eclipse.cdt.managedbuilder.core.SetMBSStringOptionValue">
+		<simple name="projectName" value="$(projectName)" />
+		<complex-array name="resourcePaths">
+			<element>
+				<simple name="id" value=".*compiler\.option\.dialect\.std.*" />
+				<simple name="value" value="ISO C99 (-std=c99)" />
+				<simple name="path" value="" />
+			</element>
+		</complex-array>
+	</process>
+
 	<!--  Set -Wextra by checking the checkbox in the settings -->
 	<process
 		type="org.eclipse.cdt.managedbuilder.core.SetMBSBooleanOptionValue">
